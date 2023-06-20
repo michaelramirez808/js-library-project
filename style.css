@@ -14,9 +14,10 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e0f2fe;
+    background-color: #e2e8f0;
+    width: 100%;
     height: 7%;
-    box-shadow: 3px 3px 20px #082f49;
+    box-shadow: 3px 3px 20px black;
 }
 footer{
     display: flex;
@@ -24,7 +25,7 @@ footer{
     justify-content: end;
 }
 #add{
-    background-color: #e0f2fe;
+    background-color: #e2e8f0;
     margin-bottom: 3%;
     margin-right: 3%;
     width: 3%;
@@ -33,10 +34,35 @@ footer{
     font-size: 20px;
 }
 #add:hover{
-    background-color: #bae6fd;
+    background-color: #cbd5e1;
     cursor: pointer;
 }
 #add:active{
-    background-color: #7dd3fc;
-    box-shadow: 3px 3px 10px #082f49;
+    background-color: #94a3b8;
+}
+.formContainer{
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 15%;
+}
+#bookForm{
+    padding: 20px;
+    background-color: #e2e8f0;
+    width: 100%;
+    box-shadow: 0px 0px 15px black;
+}
+#bookForm input[type='text'],
+#bookForm input[type='number']{
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+#submitButton:hover{
+    background-color: #cbd5e1;
+    border: black 1px solid;
+}
+#submitButton:active{
+    border: none;
+    background-color: #94a3b8;
+    border: black 1px solid;
 }
