@@ -1,7 +1,7 @@
 body, html{
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: #64748b;
     padding: 0px;
     margin: 0px;
     height: 100%;
@@ -12,9 +12,10 @@ main{
 }
 .header{
     display: flex;
+    color: white;
     align-items: center;
     justify-content: center;
-    background-color: #e2e8f0;
+    background-color: #1e293b;
     width: 100%;
     height: 7%;
     box-shadow: 3px 3px 20px black;
@@ -25,20 +26,23 @@ footer{
     justify-content: end;
 }
 #add{
-    background-color: #e2e8f0;
+    color: white;
+    background-color: #1e293b;
     margin-bottom: 3%;
     margin-right: 3%;
-    width: 3%;
-    height: 70%;
-    border-radius: 50%;
     font-size: 100%;
+    border-radius: 50px;
+    width: 5%;
+    height: 80%;
+    text-align: center;
+    box-shadow: 3px 3px 20px black
 }
 #add:hover{
-    background-color: #cbd5e1;
+    background-color: #0f172a;
     cursor: pointer;
 }
 #add:active{
-    background-color: #94a3b8;
+    background-color: #020617;
 }
 .formContainer{
     max-width: 400px;
@@ -46,8 +50,9 @@ footer{
     margin-top: 15%;
 }
 #bookForm{
+    color: white;
     padding: 20px;
-    background-color: #e2e8f0;
+    background-color: #1e293b;
     width: 100%;
     box-shadow: 0px 0px 15px black;
 }
@@ -56,6 +61,21 @@ footer{
     width: 95%;
     padding: 8px;
     margin-bottom: 12px;
+}
+#bookForm input[type='checkbox']{
+    display: inline-flex;
+    margin: 3%;
+}
+#submitButton{
+    display: flex;
+    margin-top: 3%;
+    flex: 1;
+    justify-content: end;
+    text-align: center;
+    width: 19%;
+    height: 20%;
+    text-align: center;
+    border: black 1px solid;
 }
 #submitButton:hover{
     background-color: #cbd5e1;
@@ -71,4 +91,36 @@ footer{
     justify-content: center;
     gap: 10%;
     flex-wrap: wrap
+}
+.book{
+    height: 150px;
+    width: 150px;
+    color: white;
+    background-color: #1e293b;
+    margin-top: 3%;
+    box-shadow: 0px 0px 15px black;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.book h3,
+.book p {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.readStatusButton{
+    margin-top: 10%;
+    border: none;
+    background-color: #0f172a;
+    color: white;
+    font-size: 100%;
+}
+.removeButton{
+    margin-top: 10%;
+    border: none;
+    background-color: #0f172a;
+    color: white;
+    font-size: 100%;  
 }

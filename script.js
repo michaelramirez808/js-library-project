@@ -16,12 +16,30 @@ function addArrayToPage(){
         let bookDiv = document.createElement('div');
         bookDiv.classList.add('book');
 
+        let readStatusButton = document.createElement('button');
+        readStatusButton.classList.add('readStatusButton');
+        readStatusButton.textContent = book.status === 'read' ? 'Read' : 'Unread';
+        readStatusButton.addEventListener('click', function(){
+            book.status = book.status === 'read' ? 'unread' : 'read';
+            addArrayToPage();
+        })
+        
+        let removeButton = document.createElement('button');
+        removeButton.classList.add('removeButton');
+        removeButton.textContent = 'Remove';
+        removeButton.addEventListener('click', function(){
+            myLibrary.splice(i, 1);
+            addArrayToPage();
+        })
+
         bookDiv.innerHTML = `
         <h3>Title: ${book.title}</h3>
         <p>Author: ${book.author}</p
         <p>Pages: ${book.pages}</p>
-        <p>Status: ${book.status}</p>
-        `
+        `;
+
+        bookDiv.appendChild(removeButton);
+        bookDiv.appendChild(readStatusButton);
         libraryContainer.appendChild(bookDiv);
     }
 }
@@ -31,13 +49,16 @@ function addBookToLibrary(){
     addButton.addEventListener('click', function(){
         document.getElementById('bookForm').style.display = 'block';
     });
+
     let bookForm = document.getElementById('bookForm');
     bookForm.addEventListener('submit', function(event){
         event.preventDefault();
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
     let pages = document.getElementById('pages').value;
-    let status = document.getElementById('status').value;
+    let readStatusCheckbox = document.getElementById('readStatus');
+    let status = readStatusCheckbox.checked ? 'Read' : 'Unread';
+
 
     const newBook = new Book(title, author, pages, status);
 
@@ -51,6 +72,3 @@ function addBookToLibrary(){
     });
 }
 addBookToLibrary();
-
-
-
