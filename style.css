@@ -31,7 +31,7 @@ footer{
     width: 3%;
     height: 70%;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 100%;
 }
 #add:hover{
     background-color: #cbd5e1;
@@ -65,4 +65,10 @@ footer{
     border: none;
     background-color: #94a3b8;
     border: black 1px solid;
+}
+#libraryContainer{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    flex-wrap: wrap
 }
