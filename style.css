@@ -26,6 +26,7 @@ footer{
     justify-content: end;
 }
 #add{
+    border: none;
     color: white;
     background-color: #1e293b;
     margin-bottom: 3%;
